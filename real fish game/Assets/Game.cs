@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -10,8 +10,17 @@ public class Game : MonoBehaviour
     {
         GameManager.Bait += 1;
     }
+    public void Fish()
+    {
+        if(GameManager.Bait > 0)
+        {
+            GameManager.Fish += 1;
+            GameManager.Bait -= 1;
+        }
+    }
     void Update()
     {
-        ui.Bait text = "Bait: " + GameManager.Bait;
+        ui.text = "BAIT: " + GameManager.Bait;
+        ui.text = "FISH: " + GameManager.Fish;
     }
 }
