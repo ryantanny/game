@@ -10,17 +10,8 @@ public class Game : MonoBehaviour
     {
         GameManager.Bait += 1;
     }
-    public void Fish()
-    {
-        if(GameManager.Bait > 0)
-        {
-            GameManager.Fish += 1;
-            GameManager.Bait -= 1;
-        }
-    }
     void Update()
     {
         ui.text = "BAIT: " + GameManager.Bait;
-        ui.text = "FISH: " + GameManager.Fish;
     }
 }
